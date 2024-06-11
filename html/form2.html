@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Data Table</title>
+</head>
+<body>
+    <h2>User Information</h2>
+    <form id="userForm">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" id="name" name="name"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" id="email" name="email"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit">Submit</button></td>
+            </tr>
+        </table>
+    </form>
+
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<script>
+    const userForm = document.getElementById('userForm');
+const dataTable = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+
+userForm.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent default form submission
+
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+
+  
+  const newRow = document.createElement('tr');
+
+  
+  const nameCell = document.createElement('td');
+  nameCell.textContent = name;
+  const emailCell = document.createElement('td');
+  emailCell.textContent = email;
+
+  
+  newRow.appendChild(nameCell);
+  newRow.appendChild(emailCell);
+
+
+  dataTable.appendChild(newRow);
+
+
+  userForm.reset();
+});
+
+</script>

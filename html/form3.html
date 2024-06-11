@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+</head>
+<body>
+    <center>
+    <h2>Student Registration Form</h2>
+    <form action="/submit_form" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="fatherName">Father Name:</label>
+        <input type="text" id="fatherName" name="fatherName"><br>
+
+        <label for="postalAddress">Postal Address:</label>
+        <input type="text" id="postalAddress" name="postalAddress"><br>
+
+        <label for="personalAddress">Personal Address:</label>
+        <input type="text" id="personalAddress" name="personalAddress"><br>
+
+        <p>Sex:</p>
+        <input type="radio" id="male" name="sex" value="male">
+        <label for="male">Male</label><br>
+
+        <input type="radio" id="female" name="sex" value="female">
+        <label for="female">Female</label><br>
+
+        <label for="city">City:</label><br>
+        <input type="text" id="city" name="city"><br>
+
+        <label for="course">Course:</label><br>
+        <select id="course" name="course">
+            <option value="">Select...</option>
+            
+        </select><br>
+
+        <label for="district">District:</label><br>
+        <select id="district" name="district">
+            <option value="">Select...</option>
+        
+        </select><br>
+
+        <label for="state">State:</label><br>
+        <input type="text" id="state" name="state"><br>
+
+        <label for="pincode">PinCode:</label><br>
+        <input type="text" id="pincode" name="pincode"><br>
+
+        <label for="email">Email ID:</label><br>
+        <input type="email" id="email" name="email"><br>
+
+        <label for="dob">Date of Birth (DOB):</label><br>
+        <input type="date" id="dob" name="dob"><br>
+
+        <label for="mobileNo">Mobile Number:</label><br>
+        <input type="tel" id="mobileNo" name="mobileNo"><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</center>
+</body>
+</html>
