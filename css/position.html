@@ -8,23 +8,30 @@
         .container{
             border: 5px red solid;
             background: #000;
-            position: relative;
-            left: 100px;
-            top: 100px;
+           /* display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(4,100px);
+            grid-template-rows: 100px 100px 100px 100px;*/
+            display: flex;
+            height: 500px;
+            width: 500px;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            flex-direction: row-reverse;
         }
 
         .box{
-            height: 100px;
-            width: 100px;
             background: aqua;
             border: 3px black solid;
+            height: 100px;
+            width: 100px;
         }
-
-        .box3{
-            position: absolute;
-            left: 50px;
-            top: 50px;
-        }
+       /* .box6{
+            grid-area: 2/2/4/4;
+        }*/
     </style>
 </head>
 <body>
@@ -34,6 +41,14 @@
         <div class="box box3">3</div>
         <div class="box box4">4</div>
         <div class="box box5">5</div>
+        <div class="box box6">6</div>
+        <div class="box box7">7</div>
+        <div class="box box8">8</div>
+        <div class="box box9">9</div>
+        <div class="box box10">10</div>
+        <div class="box box11">11</div>
+        <div class="box box12">12</div>
     </div>
+  
 </body>
 </html>
