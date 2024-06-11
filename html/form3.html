@@ -1,64 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Student Registration Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
 </head>
 <body>
-    <center>
-    <h2>Student Registration Form</h2>
-    <form action="/submit_form" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br>
-
-        <label for="fatherName">Father Name:</label>
-        <input type="text" id="fatherName" name="fatherName"><br>
-
-        <label for="postalAddress">Postal Address:</label>
-        <input type="text" id="postalAddress" name="postalAddress"><br>
-
-        <label for="personalAddress">Personal Address:</label>
-        <input type="text" id="personalAddress" name="personalAddress"><br>
-
-        <p>Sex:</p>
-        <input type="radio" id="male" name="sex" value="male">
-        <label for="male">Male</label><br>
-
-        <input type="radio" id="female" name="sex" value="female">
-        <label for="female">Female</label><br>
-
-        <label for="city">City:</label><br>
-        <input type="text" id="city" name="city"><br>
-
-        <label for="course">Course:</label><br>
-        <select id="course" name="course">
-            <option value="">Select...</option>
-            
-        </select><br>
-
-        <label for="district">District:</label><br>
-        <select id="district" name="district">
-            <option value="">Select...</option>
-        
-        </select><br>
-
-        <label for="state">State:</label><br>
-        <input type="text" id="state" name="state"><br>
-
-        <label for="pincode">PinCode:</label><br>
-        <input type="text" id="pincode" name="pincode"><br>
-
-        <label for="email">Email ID:</label><br>
-        <input type="email" id="email" name="email"><br>
-
-        <label for="dob">Date of Birth (DOB):</label><br>
-        <input type="date" id="dob" name="dob"><br>
-
-        <label for="mobileNo">Mobile Number:</label><br>
-        <input type="tel" id="mobileNo" name="mobileNo"><br>
-
-        <input type="submit" value="Submit">
-        <input type="reset" value="Reset">
-    </form>
-</center>
+    <form action="" method="post">
+    <table border = "2" style = "background-color: rgb(251, 255, 0);">
+        <tr>
+            <th colspan="2">Student Registration Form</th>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="name" id="name"></td>
+        </tr>
+        <tr>
+            <td>Father Name</td>
+            <td><input type="text" name="fname" id="fname"></td>
+        </tr>
+        <tr>
+            <td>Postal Address</td>
+            <td><input type="text" name="postadd" id="postadd"></td>
+        </tr>
+        <tr>
+            <td>Personal Address</td>
+            <td><input type="text" name="persadd" id="persadd"></td>
+        </tr>
+        <tr>
+            <td>Sex</td>
+            <td><input type="radio" name="sex" value="male">Male <input type="radio" name="sex" id="" value="female">Female</td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td><select name="city" id="">
+                <option value="" selected>Select City</option>
+                <option value="Rajkot">Rajkot</option>
+                <option value="Anand">Anand</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Course</td>
+            <td>
+                <select name="course" id="">
+                    <option value="" selected>Select Course</option>
+                    <option value="B.Tech">B.Tech</option>
+                    <option value="M.Tech">M.Tech</option>
+                    <option value="BCA">BCA</option>
+                    <option value="MCA">MCA</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>District</td>
+            <td><select name="district" id="">
+                <option value="" selected>Select District</option>
+                <option value="Rajkot">Rajkot</option>
+                <option value="Anand">Anand</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>State</td>
+            <td><select name="state" id="">
+                <option value="" selected>Select State</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Maharashtra">Maharashtra</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Pincode</td>
+            <td><input type="number" name="pincode" id="pincode"></td>
+        </tr>
+        <tr>
+            <td>EmailId</td>
+            <td><input type="email" name="email" id="email"></td>
+        </tr>
+        <tr>
+            <td>DOB</td>
+            <td><input type="text" name="dob" id="dob"></td>
+        </tr>
+        <tr>
+            <td>Mobile No</td>
+            <td><input type="number" name="mobile" id="mobile"></td>
+        </tr>
+        <tr>
+            <td><input type="reset" value="Reset"></td>
+            <td><input type="submit" value="Submit Form"></td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>

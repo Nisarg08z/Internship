@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="bt1" type="button">click meeeeeeeeeeeeeee</button>
+    <div id="id1"></div>
+    <div class="box" id="box"></div>
+</body>
+
+</html>
+
+
+
+<script>
+
+    let button = document.getElementById("bt1")
+    let elem = document.getElementById("box")
+
+    function a() {
+        box.style.width = "200px"
+        box.style.height = "200px"
+    }
+
+    function b() {
+        box.style.width = "100px"
+        box.style.height = "100px"
+    }
+
+    button.addEventListener("mouseover", a)
+
+    button.addEventListener("mouseleave", b)
+
+
+
+
+
+
+    /*
+    let button = document.getElementById("bt1")
+    let elem = document.getElementById("box")
+    
+    function a(){
+        box.style.backgroundColor = "red"
+    }
+
+    function b(){
+        box.style.backgroundColor = "black"
+    }
+
+    button.addEventListener("mouseover",a)
+
+    button.addEventListener("mouseleave",b)
+
+    */
+
+    /* document.writeln("helllllllllllllooooooooooooooooooo")
+     let elem = document.getElementById("id1")
+     let button = document.getElementById("bt1")
+ 
+     elem.style.color = "red"
+ 
+     button.addEventListener("dblclick",a)
+ 
+     function a(){
+         elem.innerHTML += "<h1> this is hi tag </h1><br>"
+     }
+ */
+
+
+
+</script>

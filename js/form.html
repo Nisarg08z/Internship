@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" id="userForm">
+        <table>
+            <tr>
+                <td>name</td>
+                <td>:</td>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <td>id</td>
+                <td>:</td>
+                <td><input type="text" name="id" id="id"></td>
+            </tr>
+            <tr>
+                <td>email</td>
+                <td>:</td>
+                <td><input type="email" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td>phone</td>
+                <td>:</td>
+                <td><input type="text" name="phone" id="phone"></td>
+            </tr>
+            <tr>
+                <td>password</td>
+                <td>:</td>
+                <td><input type="password" name="password" id="password"></td>
+            </tr>
+            <tr>
+                <td>gender</td>
+                <td>:</td>
+                <td>
+                    male<input type="radio" name="gender" id="gender">
+                    female<input type="radio" name="gender" id="">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><button onclick="onsubmit()">submit</button></td>
+            </tr>
+        </table>
+    </form>
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>id</th>
+                <th>email</th>
+                <th>phone</th>
+                <th>password</th>
+                <th>gender</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</body>
+
+</html>
+
+<script>
+
+    function onsubmit() {
+        console.log("data", name.value, id.value, email.value, phone.value, password.value, gender.value)
+    }
+
+    const userForm = document.getElementById('userForm');
+    const dataTable = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+
+    userForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        let name = document.getElementById("name").value
+        let id = document.getElementById("id").value
+        let email = document.getElementById("email").value
+        let phone = document.getElementById("phone").value
+        let password = document.getElementById("password").value
+        let gender = document.getElementsByClassName("gender").value
+
+
+        const newRow = document.createElement('tr');
+
+
+        const nameCell = document.createElement('td');
+        nameCell.textContent = name;
+        const emailCell = document.createElement('td');
+        emailCell.textContent = email;
+
+
+        newRow.appendChild(nameCell);
+        newRow.appendChild(emailCell);
+
+
+        dataTable.appendChild(newRow);
+
+
+        userForm.reset();
+    });
+
+</script>
