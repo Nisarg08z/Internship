@@ -1,0 +1,78 @@
+<script>
+/*
+let obj = {name : "nisarg fultariya" , phone : "1234567899"}
+
+obj.name = "nisarg patel"
+
+console.log(">>>>>>>>>>",obj.name,obj.phone)
+*/
+
+/*
+let obj = {name : "nisarg fultariya" , phone : "1234567899"}
+
+Object.freeze(obj)
+
+obj.name = "nisarg patel"
+
+console.log(">>>>>>>>>>",obj.name,obj.phone)
+*/
+
+/*
+let obj = {
+    name : "nisarg",
+    phone : "1234567899",
+    newobj : {
+        key : "value",
+        array : [1,2,3,4,5,6]
+    }
+}
+
+//console.log(">>>>>>>>",obj.newobj.array[3])
+
+let obj1 = obj
+
+obj1.name = "nisarg patel"
+obj1.newobj = []
+
+console.log(">>>>>>>>>>",obj,obj1)
+*/
+
+function a(){
+
+    console.log("hellooo")
+
+    return true
+
+}
+
+let obj = {
+    name : "nisarg",
+    phone : "1234567899",
+    fun : a,
+    newobj : {
+        key : "value",
+        array : [1,2,3,4,5,6]
+    }
+}
+
+
+let obj1 = {...obj,email:"nisarg693z@gmail.com"}
+
+obj1.name = "nisarg patel"
+obj1.newobj = []
+
+console.log(">>>>>>>>>>",obj,obj1)
+
+console.log(">>>>>>>>>>",Object.values(obj))
+
+console.log(">>>>>>>>>>",Object.keys(obj))
+
+console.log(">>>>>>>>>>",Object.entries(obj))
+
+//console.log(">>>>>>>>>>",Object.length(obj))
+
+console.log(">>>>>>>>>>",obj.fun)
+
+console.log(">>>>>>>>>>",obj.fun())
+
+</script>

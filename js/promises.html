@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="fetchdata">click meeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</button>
+
+    <div id="output"></div>
+</body>
+
+</html>
+
+<script>
+    function a() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                let condition = Math.random() > 0.5
+                if (condition) {
+                    resolve("data fetched")
+                } else {
+                    reject("failed to data fatch")
+                }
+            }, 2000);
+        })
+    }
+
+    let elem = document.getElementById("fetchdata")
+
+    elem.addEventListener("click", async () => {
+        b(`loadinggggggggggggg.........................................`)
+        elem.style.display = "none"
+        
+        await a().then((res) => {
+            b(`success : ${res}`)
+        }).catch((err) => { b(`failuer : ${err}`) })
+
+        elem.style.display = "block"
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+    })
+
+    function b(message) {
+        document.getElementById("output").innerHTML += `<p>${message}</p>`
+    }
+</script>
