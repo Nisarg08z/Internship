@@ -141,4 +141,24 @@
     }
 
     document.addEventListener('DOMContentLoaded', loadNotes);
+
+    const fetchData = async() =>
+    {
+        let d = await fetch("https://jsonplaceholder.typicode.com/todos").then((response) => response.json()).then((res) => res)
+       console.log(d);
+       d.forEach((item,index) =>
+        {
+            document.getElementById("output").innerHTML += `<div class = "card">
+            <div class = "card-header">
+            <h2>Card</h2>
+            </div>
+            <div class = "card-body">
+            <p>${item.userId}</p>
+            <p>${item.title}</p>
+            <p>${item.completed?"Yes":"no"}</p>
+            </div>
+            </div>`
+        })
+    }
+    fetchData();
 </script>
