@@ -56,19 +56,28 @@ app.post("/api/books", (req, res) => {
 
 app.delete("/api/books/:bookid", (req, res) => {
     const reqid = req.params.bookid
-    let book = books.filter((item) => item.id == reqid)
-    if (book.length == 0) {
-        res.status(404).send("<h1>Book not found</h1>")
+    let book = books.find((item) => item.id == reqid)
+    if (!book) {
+        res.status(404).json({message:"Books not found",status:404})
         return;
     }
     const index = books.indexOf(book);
     console.log(index)
     books.splice(index, 1)
-    res.send("Book deleted successfully")
+    res.send(book)
 })
 
-
-
+app.put("/api/books/:bookid", (req, res) => {
+    const reqid = req.params.bookid
+    let book = books.find((item) => item.id == reqid)
+    if (!book) {
+        res.status(404).json({message:"Books not found",status:404})
+        return;
+    }
+    book.name = req.body.name
+    book.author = req.body.author
+    res.send(book)
+})
 
 
 app.listen(3000)
